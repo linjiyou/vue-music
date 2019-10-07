@@ -1,4 +1,6 @@
 # vue-music
+#推荐歌单
+![技术栈](./src/assets/recommends.png)
 
 ## Project setup
 ```

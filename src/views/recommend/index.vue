@@ -31,6 +31,9 @@
           </ul>
         </div>
       </div>
+      <div class="loading-container" v-show="!discList.length">
+        <app-loading></app-loading>
+      </div>
     </app-scroll>
   </div>
 </template>
@@ -40,11 +43,14 @@ import AppScroll from "../../base/scroll";
 import { getRecommomend, getDiscList } from "../../api/recomend";
 import { ERR_OK } from "../../api/config";
 import axios from "axios";
+import AppLoading from "../../base/loading";
+
 export default {
   data() {
     return {
       recommends: [],
-      discList: []
+      discList: [],
+     
     };
   },
   created() {
@@ -79,7 +85,8 @@ export default {
   },
   components: {
     AppSlider,
-    AppScroll
+    AppScroll,
+    AppLoading
   }
 };
 </script>
